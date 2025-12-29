@@ -1,0 +1,386 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+
+/* ================= RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Quicksand", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 15px;
+}
+
+/* ================= BUTTONS ================= */
+.btn {
+  display: inline-block;
+  padding: 12px 25px;
+  border-radius: 15px;
+  cursor: pointer;
+  border: none;
+}
+
+.btn-primary {
+  border: 1px solid #C2B280;
+  background: transparent;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: #C2B280;
+}
+
+.primary-text {
+  color: #C2B280;
+}
+
+/* ================= HEADER ================= */
+header {
+  min-height: 100vh;
+  background: url("./img/home_bg.jpeg") center/cover no-repeat;
+  position: relative;
+
+}
+
+header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+}
+
+#navbar {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+}
+
+#typing-text::after {
+  content: '.';
+  display: inline-block;
+  animation: blink 0.7s infinite;
+  color: #e4b95b;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+#navbar img {
+  width: 60px;
+}
+
+nav ul {
+  display: flex; /* بدل none */
+  list-style: none;
+  gap: 10px;
+}
+
+nav ul li a {
+  color: #e4b95b;
+  text-decoration: none;
+  font-size: 10px;
+}
+
+header .content {
+  position: relative;
+  z-index: 2;
+  height: calc(100vh - 80px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 15px;
+}
+
+header .content h1 {
+  font-size: 22px;
+  color: #e4b95b;
+}
+
+header .content p {
+  font-size: 14px;
+  margin: 15px 0;
+  color: #e4b95b;
+}
+
+/* ================= ABOUT ================= */
+#about {
+  background: #4B3621;
+  padding: 3rem 1rem;
+  margin-top: 10px;
+}
+
+#about h2 {
+  font-size: 26px;
+  color: #e4b95b;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+#about .title p {
+  color: #e4b95b;
+  text-align: center;
+  font-size: 14px;
+}
+
+#about .about-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: center;
+}
+
+#about .about-content p {
+  color: #f5f5dc;
+  line-height: 1.8;
+}
+
+#about img {
+  width: 100%;
+  max-width: 300px;
+  margin: auto;
+}
+
+/* ================= OFFERS ================= */
+#offers {
+  background: #4B3621;
+  padding: 3rem 1rem;
+  margin-top: 10px;
+}
+
+#offers h2 {
+  color: #e4b95b;
+  text-align: center;
+  font-size: 26px;
+}
+
+#offers .title p {
+  color: #e4b95b;
+  text-align: center;
+}
+
+.offers-items,
+.offers-items2 {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.offers-items div,
+.offers-items2 div {
+  background: #fff;
+  border-radius: 15px;
+  padding: 15px;
+  max-width: 320px;
+}
+
+.offers-items img,
+.offers-items2 img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.offers-items h3,
+.offers-items2 h3 {
+  margin: 10px 0;
+  font-size: 20px;
+}
+
+.offers-items p,
+.offers-items2 p {
+  font-size: 14px;
+  color: #555;
+}
+
+/* ================= MENU ================= */
+#menu {
+  background: #4B3621;
+  padding: 3rem 1rem;
+  margin-top: 10px;
+}
+
+#menu h2 {
+  color: #e4b95b;
+  text-align: center;
+  font-size: 26px;
+}
+
+#menu .title p {
+  color: #e4b95b;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.menu-page {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.menu-card {
+  background: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  max-width: 95%;
+}
+
+.menu-card img {
+  width: 100%;
+  display: block;
+}
+
+/* ================= GALLERY ================= */
+#gallery {
+  background: #4B3621;
+  padding: 3rem 1rem;
+  margin-top: 10px;
+}
+
+#gallery h2 {
+  color: #e4b95b;
+  text-align: center;
+  font-size: 26px;
+  margin-bottom: 30px;
+}
+
+.img-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.img-gallery img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+/* Lightbox overlay */
+#lightbox {
+    display: none; /* مخفية افتراضياً */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    cursor: pointer;
+}
+
+#lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255,255,255,0.5);
+    cursor: auto;
+}
+
+/* ================= CONTACT ================= */
+#contact {
+  background: #4B3621;
+  padding: 3rem 1rem;
+  margin-top: 10px;
+}
+
+.contact-content {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.contact-info h3 {
+  color: #e4b95b;
+  font-size: 24px;
+}
+
+.contact-info p {
+  color: #f5f5dc;
+  font-size: 14px;
+}
+
+form {
+  width: 100%;
+}
+
+form input,
+form button {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  border: none;
+}
+
+/* ================= FOOTER ================= */
+#footer {
+  background: #383848;
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+  font-size: 14px;
+}
+
+/* ================= TABLET ================= */
+@media (min-width: 768px) {
+  nav ul {
+    display: flex;
+    gap: 20px;
+  }
+
+  header .content h1 {
+    font-size: 40px;
+  }
+
+  .offers-items,
+  .offers-items2 {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .img-gallery {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* ================= DESKTOP ================= */
+@media (min-width: 992px) {
+  header .content h1 {
+    font-size: 60px;
+  }
+
+  .contact-content {
+    flex-direction: row;
+  }
+}
